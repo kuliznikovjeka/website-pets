@@ -26,17 +26,27 @@
 	&__title {
 	}
 
+	// .reviews__slider-wrapper
+
+	&__slider-wrapper {
+		@media (min-width: 768px) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
 	// .reviews__slider
 
 	&__slider {
 		&:not(:last-child) {
-			margin-bottom: 60px;
+			margin-bottom: 30px;
 		}
 	}
 
 	// .reviews__button
 
 	&__button {
+		margin-top: 30px;
 	}
 
 	// .reviews__bottom
@@ -60,12 +70,33 @@
 
 	&__button {
 		background: transparent;
-		// .slider-reviews__button_prev
 
-		&_prev {
+		&_pc-prev {
+			margin-right: 20px;
+			transform: translateY(-70%);
+
+			@media (max-width: 767px) {
+				display: none;
+			}
 		}
 
-		// .slider-reviews__button_next
+		&_pc-next {
+			margin-left: 20px;
+			transform: translateY(-70%);
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+
+		&_mobile {
+			@media (min-width: 768px) {
+				display: none;
+			}
+		}
+
+		&_prev {
+			margin-right: 50px;
+		}
 
 		&_next {
 		}
@@ -133,7 +164,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 15px 120px;
+		gap: 15px 220px;
 
 		@media (max-width: 992px) {
 			gap: 15px 90px;
@@ -175,19 +206,19 @@
 				z-index: 10;
 				position: absolute;
 				display: block;
-				width: 268px;
+				width: 250px;
 				height: 112px;
-				top: -10%;
-				left: 50%;
+				top: 10%;
+				left: 80%;
 				background: url("../img/reviews/arr-decor.svg") 0 0 / 100% 100% no-repeat;
 
 				@media (max-width: 1080px) {
-					width: 200px;
-					top: -15%;
+					width: 220px;
+					top: -5%;
 				}
 
-				@media (max-width: 900px) {
-					width: 160px;
+				@media (max-width: 992px) {
+					display: none;
 				}
 			}
 		}

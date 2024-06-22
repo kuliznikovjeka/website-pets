@@ -23,8 +23,8 @@ const aboutClinicSlider = new Swiper(".clinic-about-slider", {
 
 const reviewsSlider = new Swiper(".slider-reviews", {
   navigation: {
-    nextEl: ".slider-reviews__button_prev",
-    prevEl: ".slider-reviews__button_next",
+    nextEl: ".slider-reviews__button_next",
+    prevEl: ".slider-reviews__button_prev",
   },
 
   spaceBetween: 40,
@@ -37,7 +37,7 @@ const reviewsSlider = new Swiper(".slider-reviews", {
     },
 
     650: {
-      slidesPerView: 2,
+      slidesPerView: 1.3,
       spaceBetween: 10,
     },
 
