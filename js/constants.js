@@ -9,6 +9,10 @@ const headerCloseMenu = document.querySelector(".header__close-menu");
 const headerBox1 = document.getElementById("header-box-work-1");
 const headerBox2 = document.getElementById("header-box-work-2");
 
+const tabs = document.querySelector(".scroll-block-doctors__tabs");
+const tabsBtn = document.querySelectorAll(".scroll-block-doctors__tab-btn");
+const tabsContent = document.querySelectorAll(".doctors__item");
+
 export {
   iconMenu,
   headerCloseMenu,
@@ -18,4 +22,7 @@ export {
   menuButton,
   headerBox1,
   headerBox2,
+  tabs,
+  tabsBtn,
+  tabsContent,
 };

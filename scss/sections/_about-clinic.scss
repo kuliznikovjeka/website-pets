@@ -114,6 +114,10 @@
 		cursor: grab;
 		width: 100%;
 		border-radius: 15px;
+		@media (max-width: 767px) {
+			display: flex;
+			justify-content: center;
+		}
 	}
 
 	// .clinic-about-slider__img
@@ -141,6 +145,10 @@
 			border-radius: 15px;
 			max-width: 100%;
 			object-fit: cover;
+		}
+
+		@media (max-width: 767px) {
+			max-width: 600px;
 		}
 	}
 }
