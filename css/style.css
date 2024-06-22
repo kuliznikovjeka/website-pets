@@ -1779,7 +1779,14 @@ body._lock {
 }
 
 .doctors__pc-content {
-  width: 70%;
+  max-width: 650px;
+  width: 100%;
+}
+
+@media (max-width: 1180px) {
+  .doctors__pc-content {
+    max-width: 450px;
+  }
 }
 
 .doctors__pc-row {
@@ -1790,6 +1797,12 @@ body._lock {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 50px;
+}
+
+@media (max-width: 992px) {
+  .doctors__pc-row {
+    display: none;
+  }
 }
 
 .doctors__scroll-block {
@@ -1815,12 +1828,71 @@ body._lock {
   border-radius: 100px;
 }
 
-.doctors__item {
-  display: none;
+@media (min-width: 993px) {
+  .doctors__item {
+    display: none;
+  }
 }
 
 .doctors__item_active {
   display: block;
+}
+
+@media (min-width: 993px) {
+  .doctors__mobile-slider {
+    display: none;
+  }
+}
+
+.doctors__mobile-slider:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.doctors__button-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 993px) {
+  .doctors__button-wrap {
+    display: none;
+  }
+}
+
+.doctors__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+}
+
+.doctors__buttons:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 993px) {
+  .doctors__buttons {
+    display: none;
+  }
+}
+
+.doctors__button_prev {
+  background: transparent;
+}
+
+.doctors__button_next {
+  background: transparent;
 }
 
 .scroll-block-doctors__tabs {
@@ -1835,6 +1907,8 @@ body._lock {
   max-width: 420px;
   width: 100%;
   padding: 5px 8px;
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
 }
 
 .scroll-block-doctors__tab-btn:not(:last-child) {
@@ -1844,6 +1918,8 @@ body._lock {
 .scroll-block-doctors__tab-btn_active {
   background-color: #fff;
   pointer-events: none;
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
 }
 
 .scroll-block-doctors__item {
@@ -1860,7 +1936,6 @@ body._lock {
 }
 
 .scroll-block-doctors__avatar {
-  height: 66px;
   width: 66px;
   border: 1px solid #000;
   border-radius: 100%;
@@ -1893,6 +1968,31 @@ body._lock {
   border: 2px solid #000;
   border-radius: 10px;
   padding: 40px;
+}
+
+@media (max-width: 992px) {
+  .item-doctors {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-doctors {
+    padding: 20px;
+  }
 }
 
 .item-doctors__img {

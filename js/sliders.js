@@ -63,6 +63,14 @@ const reviewsSlider = new Swiper(".slider-reviews", {
   },
 });
 
+const doctorsSlider = new Swiper(".doctors__swiper", {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".doctors__button_next",
+    prevEl: ".doctors__button_prev",
+  },
+});
+
 const some = 0;
 
 export { some };
