@@ -69,6 +69,20 @@ const doctorsSlider = new Swiper(".doctors__swiper", {
     nextEl: ".doctors__button_next",
     prevEl: ".doctors__button_prev",
   },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+
+    420: {
+      slidesPerView: 1,
+    },
+
+    767: {
+      slidesPerView: 2,
+    },
+  },
 });
 
 const servicesSlider = new Swiper(".services__swiper", {
@@ -93,6 +107,10 @@ const servicesSlider = new Swiper(".services__swiper", {
 
     1080: {
       slidesPerView: 3,
+    },
+
+    1200: {
+      slidesPerView: 4,
     },
   },
 });

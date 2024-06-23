@@ -1,8 +1,64 @@
 .hero {
-	padding: 250px 0px 100px 0px;
+	padding: 150px 0px 100px 0px;
+
+	@media (max-width: 992px) {
+		// padding: 50px 0px;
+	}
+
+	@media (max-width: 480px) {
+		// padding: 30px 0px;
+	}
+
 	// .hero__container
 
 	&__container {
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: -1;
+			width: 257px;
+			height: 384px;
+			bottom: -5%;
+			left: -15%;
+			background: url("../img/hero/big-decor.svg") 0 0 / 100% 100% no-repeat;
+			background-size: cover;
+
+			@media (max-width: 1600px) {
+				width: 227px;
+				height: 340px;
+				bottom: -2%;
+				left: -10%;
+			}
+
+			@media (max-width: 1400px) {
+				width: 187px;
+				height: 200px;
+				bottom: -7%;
+				left: 30%;
+			}
+
+			@media (max-width: 1200px) {
+				width: 150px;
+				height: 170px;
+				bottom: -7%;
+				left: 40%;
+			}
+
+			@media (max-width: 992px) {
+				width: 120px;
+				height: 140px;
+				left: 75%;
+			}
+
+			@media (max-width: 480px) {
+				width: 100px;
+				height: 120px;
+				left: 65%;
+			}
+		}
 	}
 
 	// .hero__wpapper-slider
@@ -106,7 +162,7 @@
 		align-items: center;
 		gap: 30px;
 		cursor: grab;
-		
+
 		@media (max-width: 992px) {
 			flex-direction: column;
 			align-items: center;

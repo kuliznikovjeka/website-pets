@@ -108,7 +108,7 @@ body._lock {
 }
 
 [class*="__container"] {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -837,7 +837,67 @@ body._lock {
 }
 
 .hero {
-  padding: 250px 0px 100px 0px;
+  padding: 150px 0px 100px 0px;
+}
+
+.hero__container {
+  position: relative;
+}
+
+.hero__container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 257px;
+  height: 384px;
+  bottom: -5%;
+  left: -15%;
+  background: url("../img/hero/big-decor.svg") 0 0/100% 100% no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1600px) {
+  .hero__container::before {
+    width: 227px;
+    height: 340px;
+    bottom: -2%;
+    left: -10%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .hero__container::before {
+    width: 187px;
+    height: 200px;
+    bottom: -7%;
+    left: 30%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero__container::before {
+    width: 150px;
+    height: 170px;
+    bottom: -7%;
+    left: 40%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero__container::before {
+    width: 120px;
+    height: 140px;
+    left: 75%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__container::before {
+    width: 100px;
+    height: 120px;
+    left: 65%;
+  }
 }
 
 .hero__slider:not(:last-child) {
@@ -1312,7 +1372,7 @@ body._lock {
 }
 
 .reviews__top:not(:last-child) {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 @media (min-width: 768px) {
@@ -1424,6 +1484,38 @@ body._lock {
 
 .swiper-slide__description {
   text-align: left;
+}
+
+.bottom-reviews {
+  position: relative;
+}
+
+.bottom-reviews::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 211px;
+  height: 302px;
+  top: -30%;
+  right: -15%;
+  background: url("../img/reviews/decor.svg") 0 0/100% 100% no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1500px) {
+  .bottom-reviews::before {
+    width: 145px;
+    height: 230px;
+    top: -30%;
+    right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .bottom-reviews::before {
+    display: none;
+  }
 }
 
 .bottom-reviews__row {
@@ -1778,13 +1870,46 @@ body._lock {
 
 @media (max-width: 992px) {
   .doctors {
-    padding: 50px 0px;
+    padding: 250px 0px 50px 0px;
   }
 }
 
 @media (max-width: 480px) {
   .doctors {
-    padding: 30px 0px;
+    padding: 230px 0px 30px 0px;
+  }
+}
+
+.doctors__container {
+  position: relative;
+}
+
+.doctors__container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 267px;
+  height: 275px;
+  top: -20%;
+  right: -20%;
+  background: url("../img/doctors/decor.svg") 0 0/100% 100% no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1500px) {
+  .doctors__container::before {
+    width: 200px;
+    height: 200px;
+    top: -20%;
+    right: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .doctors__container::before {
+    top: -30%;
+    right: 2%;
   }
 }
 
@@ -2053,13 +2178,32 @@ body._lock {
 
 @media (max-width: 992px) {
   .services {
-    padding: 25px 0px;
+    padding: 50px 0px 25px 0px;
   }
 }
 
 @media (max-width: 480px) {
   .services {
-    padding: 15px 0px;
+    padding: 50px 0px 15px 0px;
+  }
+}
+
+.services__container {
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .services__container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 77px;
+    height: 64px;
+    top: -10%;
+    left: 2%;
+    background: url("../img/services/decor.svg") 0 0/100% 100% no-repeat;
+    background-size: cover;
   }
 }
 
@@ -2091,10 +2235,16 @@ body._lock {
 
 .item-services {
   padding: 14px;
-  height: 470px;
+  height: 500px;
   overflow-y: auto;
   position: relative;
   cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+  .item-services {
+    height: 550px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2225,7 +2375,7 @@ body._lock {
 }
 
 .item-services__description:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .item-services__list {

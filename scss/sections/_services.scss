@@ -2,16 +2,32 @@
 	padding: 50px 0px;
 
 	@media (max-width: 992px) {
-		padding: 25px 0px;
+		padding: 50px 0px 25px 0px;
 	}
 
 	@media (max-width: 480px) {
-		padding: 15px 0px;
+		padding: 50px 0px 15px 0px;
 	}
 
 	// .services__container
 
 	&__container {
+		position: relative;
+
+		@media (max-width: 992px) {
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				z-index: -1;
+				width: 77px;
+				height: 64px;
+				top: -10%;
+				left: 2%;
+				background: url("../img/services/decor.svg") 0 0 / 100% 100% no-repeat;
+				background-size: cover;
+			}
+		}
 	}
 
 	// .services__title
@@ -74,10 +90,14 @@
 
 .item-services {
 	padding: 14px;
-	height: 470px;
+	height: 500px;
 	overflow-y: auto;
 	position: relative;
 	cursor: pointer;
+
+	@media (max-width: 1300px) {
+		height: 550px;
+	}
 
 	@media (max-width: 480px) {
 		height: 510px;
@@ -199,7 +219,7 @@
 		font-size: 16px;
 
 		&:not(:last-child) {
-			margin-bottom: 30px;
+			margin-bottom: 15px;
 		}
 	}
 
