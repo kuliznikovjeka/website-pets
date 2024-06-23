@@ -27,6 +27,15 @@
 		}
 	}
 
+	&__btn-row {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__button-close {
+		background-color: transparent;
+	}
+
 	// .modal-reception__title
 
 	&__title {
@@ -107,7 +116,7 @@
 
 		@media (max-width: 480px) {
 			min-height: 30px;
-			
+
 			&:not(:last-child) {
 				margin-bottom: 15px;
 			}

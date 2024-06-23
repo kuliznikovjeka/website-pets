@@ -395,6 +395,7 @@ body._lock {
 
 .menu__button {
   display: inline-block;
+  background-color: #fcfbfb;
 }
 
 @media (max-width: 992px) {
@@ -856,6 +857,19 @@ body._lock {
   background-color: #fff;
   border: 2px solid #000;
   border-radius: 20px;
+}
+
+.modal-reception__btn-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.modal-reception__button-close {
+  background-color: transparent;
 }
 
 .modal-reception__title {

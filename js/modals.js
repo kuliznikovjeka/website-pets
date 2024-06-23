@@ -28,11 +28,10 @@ export function closeModal() {
 
     if (e.target === modalOverlay || closeBtn) {
       modalOverlay.classList.remove("modal-overlay__visible");
+      modals.forEach((modal) => {
+        modal.classList.remove("modal__visible");
+      });
     }
-
-    modals.forEach((modal) => {
-      modal.classList.remove("modal__visible");
-    });
   });
 }
 
