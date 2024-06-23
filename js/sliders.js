@@ -64,10 +64,36 @@ const reviewsSlider = new Swiper(".slider-reviews", {
 });
 
 const doctorsSlider = new Swiper(".doctors__swiper", {
-  slidesPerView: 1,
+  slidesPerView: 3,
   navigation: {
     nextEl: ".doctors__button_next",
     prevEl: ".doctors__button_prev",
+  },
+});
+
+const servicesSlider = new Swiper(".services__swiper", {
+  slidesPerView: 3,
+  navigation: {
+    nextEl: ".services__button_next",
+    prevEl: ".services__button_prev",
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+
+    420: {
+      slidesPerView: 1.2,
+    },
+
+    767: {
+      slidesPerView: 2,
+    },
+
+    1080: {
+      slidesPerView: 3,
+    },
   },
 });
 
