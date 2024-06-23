@@ -1,37 +1,39 @@
-
-const btn = document.querySelector('.form-calculation__btn');
-
-const modalOverlay = document.querySelector('.modal-overlay');
-const modal = document.querySelector('.modal');
-const modalClose = document.querySelector('.modal__close');
-
-const calculationInput = document.querySelectorAll('.calculation-input');
+import {
+  buttonsPopap,
+  buttonPopapClose,
+  modalOverlay,
+  modals,
+} from "./constants.js";
 
 function openModal() {
-	btn.addEventListener('click', () => {
-		const areBothInputsNotEmpty = Array.from(calculationInput).every(input => input.value !== '');
+  buttonsPopap.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      const button = event.target.closest(".button-main");
+      const path = button.getAttribute("data-popap-path");
 
-		if (areBothInputsNotEmpty) {
-			let path = btn.getAttribute('data-path');
-			console.log(path);
-			modal.classList.add('modal__visible');
-			modalOverlay.classList.add('modal-overlay__visible');
-		}
-	});
+      const popap = document
+        .querySelector(`[data-popap-target="${path}"]`)
+        .classList.add("modal__visible");
+
+      modalOverlay.classList.add("modal-overlay__visible");
+    });
+  });
 }
+
 openModal();
 
-function closeModal() {
-	modalOverlay.addEventListener('click', (e) => {
-		if (e.target == modalOverlay || e.target == modalClose) {
-			modalOverlay.classList.remove('modal-overlay__visible');
-			modal.classList.remove('modal__visible');
+export function closeModal() {
+  modalOverlay.addEventListener("click", (e) => {
+    const closeBtn = e.target.closest(".button-popap-close");
 
-		}
-	});
+    if (e.target === modalOverlay || closeBtn) {
+      modalOverlay.classList.remove("modal-overlay__visible");
+    }
+
+    modals.forEach((modal) => {
+      modal.classList.remove("modal__visible");
+    });
+  });
 }
 
 closeModal();
-
-
-

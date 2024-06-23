@@ -13,6 +13,11 @@ const tabs = document.querySelector(".scroll-block-doctors__tabs");
 const tabsBtn = document.querySelectorAll(".scroll-block-doctors__tab-btn");
 const tabsContent = document.querySelectorAll(".doctors__item");
 
+const modalOverlay = document.querySelector(".modal-overlay");
+const modals = document.querySelectorAll(".modal");
+const buttonsPopap = document.querySelectorAll(".button-main");
+const buttonPopapClose = document.querySelectorAll("button-popap-close");
+
 export {
   iconMenu,
   headerCloseMenu,
@@ -25,4 +30,8 @@ export {
   tabs,
   tabsBtn,
   tabsContent,
+  modalOverlay,
+  buttonsPopap,
+  buttonPopapClose,
+  modals,
 };
